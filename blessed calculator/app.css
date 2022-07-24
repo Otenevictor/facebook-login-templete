@@ -1,0 +1,105 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:normal;
+}
+
+body{
+    padding: 20px;
+    margin: 0;
+    background-image: url("background.jpg");
+}
+
+.cal-grid { 
+    width: 400px;
+    height: 630px;
+    margin: auto;
+    padding-top:0px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* min-height:100vh; */
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+}
+
+.cal-grid > button {
+    cursor: pointer;
+    font-size: 2em;
+    border: 1px solid white;
+    border-radius: 50px;
+    outline:none;
+    background-color: goldenrod;
+}
+
+.cal-grid > button:hover{
+    background-color: white;
+}
+
+#ac {
+background-color: green;
+color:white;
+}
+
+#ac:hover{
+    background-color:brown;
+}
+
+#del{
+    background-color: red;
+    color:white;
+}
+
+#del:hover{
+    background-color:brown;
+}
+
+.two-space{
+    grid-column:span 2;
+}
+
+#res{
+    background-color: blue;
+    color: white;
+}
+
+#res:hover{
+    background-color:black;
+}
+
+.output{
+    border-radius: 10px;
+    grid-column: 1/-1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction:column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+.output .up-screen{
+    background-color: red;
+    color:white;
+    font-size: 1.5rem;
+    margin:2px;
+
+}
+
+
+.output .old-screen{
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.output .down-screen{
+    color: white;
+    font-size: 2.5rem;
+}
